@@ -3,7 +3,7 @@ title: OutsideQuest AI: Screen-Free Nature Quests with On-Device Gemma 3
 published: true
 tags: devchallenge, hf26challenge, gemma, opensource
 canonical_url: https://outside-quest-ai.vercel.app/
-cover_image: https://raw.githubusercontent.com/Harshitagarwal113/OutsideQuest-AI/main/public/icons/icon-512.svg
+cover_image: https://raw.githubusercontent.com/Harshitagarwal113/OutsideQuest-AI/main/public/outsidequest-banner.jpg
 description: OutsideQuest AI creates personalized outdoor micro-adventures using Google Gemma 3 running directly in your browser with zero servers, zero API keys, and 100% privacy.
 ---
 

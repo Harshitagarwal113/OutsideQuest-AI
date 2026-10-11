@@ -1,5 +1,7 @@
 # OutsideQuest AI 🌲
 
+![OutsideQuest AI Banner](public/outsidequest-banner.jpg)
+
 > **Turn routine neighborhood walks into sensory outdoor micro-adventures with browser-native, open-weight AI.**  
 > *Built for the Touch Grass Open-Source AI Challenge.*
 
