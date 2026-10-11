@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="40" fill="#315D44"/>
+  <!-- Mountain / Nature Compass Icon -->
+  <path d="M96 36 L144 140 L48 140 Z" fill="#CBD9C7" opacity="0.3"/>
+  <path d="M72 88 L120 140 L24 140 Z" fill="#E9E0D0" opacity="0.4"/>
+  <path d="M120 72 L168 140 L72 140 Z" fill="#E9E0D0" opacity="0.25"/>
+  <!-- Compass Needle / Sun -->
+  <circle cx="96" cy="70" r="14" fill="#D88D51"/>
+  <path d="M96 46 L96 54 M96 86 L96 94 M72 70 L80 70 M112 70 L120 70" stroke="#F7F6EF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Forest silhouette -->
+  <path d="M96 96 L112 140 L80 140 Z" fill="#F7F6EF"/>
+</svg>

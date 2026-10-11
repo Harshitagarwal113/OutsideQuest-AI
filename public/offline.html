@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline | OutsideQuest AI</title>
+  <style>
+    :root {
+      --bg: #F7F6EF;
+      --forest: #315D44;
+      --sand: #E9E0D0;
+      --charcoal: #252B25;
+      --muted: #5C665C;
+    }
+    body {
+      margin: 0;
+      padding: 2rem 1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--charcoal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--sand);
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(37, 43, 37, 0.04);
+    }
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      margin: 0 auto 1.5rem auto;
+      border-radius: 9999px;
+      background-color: #E5ECE3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--forest);
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin: 0 0 0.75rem 0;
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 1.5rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background-color: var(--forest);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #264A36;
+    }
+    .tips {
+      margin-top: 1.5rem;
+      text-align: left;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background-color: var(--bg);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--sand);
+    }
+    .tips ul {
+      margin: 0.5rem 0 0 1.25rem;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon" aria-hidden="true">🌲</div>
+    <h1>You are Currently Offline</h1>
+    <p>OutsideQuest AI is built to keep running when you step off the grid. Your active and saved micro-adventures are preserved safely in your local browser storage.</p>
+    <a href="/" class="btn" onclick="window.location.reload(); return false;">Try Reconnecting</a>
+
+    <div class="tips">
+      <strong>While you're out touching grass:</strong>
+      <ul>
+        <li>Listen for three distinct bird calls or natural sounds.</li>
+        <li>Observe the patterns of bark or leaves along your path.</li>
+        <li>Your saved journal will sync locally whenever you return.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

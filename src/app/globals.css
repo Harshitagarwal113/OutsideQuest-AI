@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-earth: #F7F6EF;
+  --forest-green: #315D44;
+  --soft-sage: #CBD9C7;
+  --natural-sand: #E9E0D0;
+  --warm-orange: #D88D51;
+  --dark-charcoal: #252B25;
+}
+
+@layer base {
+  body {
+    background-color: #F7F6EF;
+    color: #252B25;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Accessible focus styling */
+  *:focus-visible {
+    outline: 2px solid #315D44;
+    outline-offset: 2px;
+  }
+
+  /* Custom selection */
+  ::selection {
+    background-color: #CBD9C7;
+    color: #252B25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print styling for printing field notes & reflections */
+@media print {
+  header,
+  nav,
+  footer,
+  #builder-card,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
