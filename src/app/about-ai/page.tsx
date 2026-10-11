@@ -48,42 +48,42 @@ export default function AboutAiPage() {
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2 text-earth-forest">
                 <Cpu className="w-5 h-5 text-earth-forest" />
-                <CardTitle className="text-lg">Open-Weight Architecture: Qwen2.5-0.5B</CardTitle>
+                <CardTitle className="text-lg">Open-Weight Architecture: Google Gemma 3</CardTitle>
               </div>
               <Badge variant="outline" className="text-[10px] bg-white border-earth-forest text-earth-forest font-semibold">
-                Apache 2.0 License
+                Gemma Open Weights
               </Badge>
             </div>
           </CardHeader>
           <CardContent className="p-5 pt-0 space-y-3 text-xs sm:text-sm text-earth-charcoal leading-relaxed">
             <p>
-              OutsideQuest AI integrates <strong>{RECOMMENDED_AI_MODEL.displayName}</strong>, an open-weight small language model developed by Alibaba Cloud and packaged for browser ONNX runtime execution by the Hugging Face ONNX Community.
+              OutsideQuest AI integrates <strong>{RECOMMENDED_AI_MODEL.displayName}</strong>, an open-weight instruction model built by Google and packaged for high-efficiency browser ONNX runtime execution by the Hugging Face ONNX Community.
             </p>
             <div className="p-3 bg-white/80 rounded-lg border border-earth-border text-xs space-y-1.5">
               <div className="flex justify-between">
                 <span className="text-earth-muted">Repository:</span>
                 <a
-                  href="https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct"
+                  href={`https://huggingface.co/${RECOMMENDED_AI_MODEL.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono text-earth-forest font-semibold hover:underline flex items-center gap-1"
                 >
-                  onnx-community/Qwen2.5-0.5B-Instruct <ExternalLink className="w-3 h-3 inline" />
+                  {RECOMMENDED_AI_MODEL.id} <ExternalLink className="w-3 h-3 inline" />
                 </a>
               </div>
               <div className="flex justify-between">
                 <span className="text-earth-muted">Quantization:</span>
-                <span className="font-mono text-earth-charcoal font-medium">INT4 (q4) ~350 MB</span>
+                <span className="font-mono text-earth-charcoal font-medium">INT4 (q4) {RECOMMENDED_AI_MODEL.sizeEstimate}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-earth-muted">License:</span>
                 <a
-                  href="https://www.apache.org/licenses/LICENSE-2.0"
+                  href="https://ai.google.dev/gemma/terms"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-earth-forest hover:underline flex items-center gap-1"
                 >
-                  Apache License 2.0 <ExternalLink className="w-3 h-3 inline" />
+                  Gemma Terms of Use <ExternalLink className="w-3 h-3 inline" />
                 </a>
               </div>
             </div>

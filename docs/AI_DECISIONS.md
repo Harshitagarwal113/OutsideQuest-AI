@@ -20,11 +20,11 @@ Traditional generative AI products encourage excessive screen-time: infinite cha
 OutsideQuest AI integrates browser-native neural inference powered by **Transformers.js v3** (`@huggingface/transformers`) and **ONNX Runtime Web**.
 
 ### Primary Model Specification
-- **Model Identifier:** `onnx-community/Qwen2.5-0.5B-Instruct`
-- **Original Model Authors:** Alibaba Cloud Qwen Team
+- **Model Identifier:** `onnx-community/gemma-3-270m-it-ONNX`
+- **Original Model Authors:** Google Gemma Team
 - **ONNX Community Conversion:** Hugging Face Community
-- **License:** [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-- **Quantization:** `q4` (INT4 quantized weights, ~350 MB download footprint)
+- **License:** [Gemma Terms of Use](https://ai.google.dev/gemma/terms)
+- **Quantization:** `q4` (INT4 quantized weights, ~200 MB download footprint)
 - **Primary Execution Backend:** `WebGPU` (hardware-accelerated tensor computations directly on GPU)
 - **Fallback Execution Backend:** `WASM / CPU` (WebAssembly with SIMD instructions for universal compatibility)
 

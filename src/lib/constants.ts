@@ -210,11 +210,11 @@ export const INTEREST_OPTIONS: Array<{
 ];
 
 export const RECOMMENDED_AI_MODEL = {
-  id: 'onnx-community/Qwen2.5-0.5B-Instruct',
-  displayName: 'Qwen 2.5 (0.5B Instruct)',
-  approxDownloadMb: 350,
-  sizeEstimate: '~350 MB',
-  description: 'Ultra-lightweight open-weight model optimized for browser execution via WebGPU/WASM.',
+  id: 'onnx-community/gemma-3-270m-it-ONNX',
+  displayName: 'Google Gemma 3 (270M Instruct)',
+  approxDownloadMb: 200,
+  sizeEstimate: '~200 MB',
+  description: 'Ultra-lightweight Google Gemma instruction model optimized for on-device browser execution via WebGPU/WASM.',
 };
 
 export const SCREEN_FREE_REMINDER = 'Phone away. Adventure on.';

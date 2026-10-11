@@ -10,7 +10,7 @@ describe('Worker Message Protocol Schemas', () => {
   it('validates INIT request schema', () => {
     const validInit: WorkerRequest = {
       type: 'INIT',
-      modelId: 'onnx-community/Qwen2.5-0.5B-Instruct',
+      modelId: 'onnx-community/gemma-3-270m-it-ONNX',
       preferredDevice: 'webgpu',
       dtype: 'q4',
     };
@@ -51,7 +51,7 @@ describe('Worker Message Protocol Schemas', () => {
     const success: WorkerResponse = {
       type: 'INIT_SUCCESS',
       device: 'webgpu',
-      modelId: 'onnx-community/Qwen2.5-0.5B-Instruct',
+      modelId: 'onnx-community/gemma-3-270m-it-ONNX',
     };
     expect(() => workerResponseSchema.parse(success)).not.toThrow();
 

@@ -103,12 +103,12 @@ OutsideQuest AI/
 
 OutsideQuest AI uses open-weight Small Language Models developed and released by the open-source community:
 
-- **Model Identity:** `onnx-community/Qwen2.5-0.5B-Instruct`
-- **Original Model Authors:** Alibaba Cloud Qwen Team (`Qwen/Qwen2.5-0.5B-Instruct`)
-- **ONNX Quantization & Conversion:** Xenova / ONNX Community on Hugging Face
+- **Model Identity:** `onnx-community/gemma-3-270m-it-ONNX`
+- **Original Model Authors:** Google Gemma Team (`google/gemma-3-270m-it`)
+- **ONNX Quantization & Conversion:** ONNX Community on Hugging Face
 - **Precision:** 4-bit Quantized (`q4` / `ONNX` format)
-- **Approximate Download Footprint:** ~350 MB (quantized weights and tokenizer files)
-- **Model License:** [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) (permissive open-weights license permitting non-commercial and commercial local inference)
+- **Approximate Download Footprint:** ~200 MB (quantized weights and tokenizer files)
+- **Model License:** [Gemma Open Model Terms of Use](https://ai.google.dev/gemma/terms) (open-weights license permitting local inference and research)
 
 ---
 
@@ -215,4 +215,4 @@ We welcome contributions that improve sensory adventure design, accessibility, a
 ## 📄 License
 
 OutsideQuest AI is open-source software licensed under the [MIT License](LICENSE).
-The underlying AI model weights (`Qwen2.5-0.5B-Instruct`) are licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+The underlying AI model weights (`gemma-3-270m-it-ONNX`) are licensed under the [Gemma Open Model Terms of Use](https://ai.google.dev/gemma/terms).

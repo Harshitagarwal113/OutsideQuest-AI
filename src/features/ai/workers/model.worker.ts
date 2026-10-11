@@ -6,7 +6,7 @@ env.allowLocalModels = false;
 env.useBrowserCache = true;
 
 class PipelineSingleton {
-  static modelId = 'onnx-community/Qwen2.5-0.5B-Instruct';
+  static modelId = 'onnx-community/gemma-3-270m-it-ONNX';
   static instance: TextGenerationPipeline | null = null;
   static activeDevice: 'webgpu' | 'wasm' | 'cpu' = 'wasm';
 
@@ -131,17 +131,33 @@ self.addEventListener('message', async (event: MessageEvent<WorkerRequest>) => {
         );
 
         const messages = [
-          { role: 'system', content: request.systemPrompt },
+          ...(request.systemPrompt ? [{ role: 'system', content: request.systemPrompt }] : []),
           { role: 'user', content: request.prompt },
         ];
 
-        const output = await generator(messages, {
-          max_new_tokens: request.maxNewTokens || 512,
-          temperature: request.temperature || 0.4,
-          do_sample: true,
-          top_p: 0.9,
-          return_full_text: false,
-        });
+        let output: unknown;
+        try {
+          output = await generator(messages, {
+            max_new_tokens: request.maxNewTokens || 512,
+            temperature: request.temperature || 0.4,
+            do_sample: true,
+            top_p: 0.9,
+            return_full_text: false,
+          });
+        } catch {
+          // Gemma fallback: merge system instructions into single user message if chat template disallows system role
+          const combinedUserPrompt = request.systemPrompt
+            ? `${request.systemPrompt}\n\nTask:\n${request.prompt}`
+            : request.prompt;
+
+          output = await generator([{ role: 'user', content: combinedUserPrompt }], {
+            max_new_tokens: request.maxNewTokens || 512,
+            temperature: request.temperature || 0.4,
+            do_sample: true,
+            top_p: 0.9,
+            return_full_text: false,
+          });
+        }
 
         const rawText = Array.isArray(output) && output[0] && typeof output[0] === 'object'
           ? (output[0] as { generated_text?: string | Array<{ content?: string }> }).generated_text || ''

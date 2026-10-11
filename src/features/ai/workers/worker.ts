@@ -58,7 +58,7 @@ self.addEventListener('message', async (event: MessageEvent<WorkerMessageRequest
         self.postMessage({
           type: 'LOAD_COMPLETE',
           data: {
-            modelId: payload?.modelId || 'Xenova/Qwen1.5-0.5B-Chat',
+            modelId: payload?.modelId || 'onnx-community/gemma-3-270m-it-ONNX',
             ready: true,
           },
         } as WorkerMessageResponse);

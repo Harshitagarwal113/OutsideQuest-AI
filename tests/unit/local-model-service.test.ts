@@ -40,7 +40,7 @@ describe('LocalModelService Lifecycle & Transitions', () => {
   it('initializes in not_initialized state with default model and device', () => {
     const status = service.getStatus();
     expect(status.state).toBe('not_initialized');
-    expect(status.modelId).toBe('onnx-community/Qwen2.5-0.5B-Instruct');
+    expect(status.modelId).toBe('onnx-community/gemma-3-270m-it-ONNX');
     expect(['webgpu', 'wasm', 'cpu']).toContain(status.device);
   });
 
@@ -85,7 +85,7 @@ describe('LocalModelService Lifecycle & Transitions', () => {
     service.handleWorkerMessage({
       type: 'INIT_SUCCESS',
       device: 'webgpu',
-      modelId: 'onnx-community/Qwen2.5-0.5B-Instruct',
+      modelId: 'onnx-community/gemma-3-270m-it-ONNX',
     } as WorkerResponse);
 
     await initPromise;
@@ -117,7 +117,7 @@ describe('LocalModelService Lifecycle & Transitions', () => {
     service.handleWorkerMessage({
       type: 'INIT_SUCCESS',
       device: 'wasm',
-      modelId: 'onnx-community/Qwen2.5-0.5B-Instruct',
+      modelId: 'onnx-community/gemma-3-270m-it-ONNX',
     } as WorkerResponse);
 
     const genPromise = service.generateText('user prompt', 'system prompt');
@@ -152,7 +152,7 @@ describe('LocalModelService Lifecycle & Transitions', () => {
     service.handleWorkerMessage({
       type: 'INIT_SUCCESS',
       device: 'wasm',
-      modelId: 'onnx-community/Qwen2.5-0.5B-Instruct',
+      modelId: 'onnx-community/gemma-3-270m-it-ONNX',
     } as WorkerResponse);
 
     const genPromise = service.generateText('prompt', 'system');
@@ -174,7 +174,7 @@ describe('LocalModelService Lifecycle & Transitions', () => {
     service.handleWorkerMessage({
       type: 'INIT_SUCCESS',
       device: 'wasm',
-      modelId: 'onnx-community/Qwen2.5-0.5B-Instruct',
+      modelId: 'onnx-community/gemma-3-270m-it-ONNX',
     } as WorkerResponse);
 
     const genPromise = service.generateText('prompt', 'system');

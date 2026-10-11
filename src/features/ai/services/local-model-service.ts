@@ -1,5 +1,6 @@
 import type { WorkerRequest, WorkerResponse } from '../schemas/ai-message-schema';
 import { workerResponseSchema } from '../schemas/ai-message-schema';
+import { RECOMMENDED_AI_MODEL } from '@/lib/constants';
 
 export type ModelLifecycleState =
   | 'not_initialized'
@@ -27,7 +28,7 @@ export class LocalModelService {
   private worker: Worker | null = null;
   private status: ModelServiceStatus = {
     state: 'not_initialized',
-    modelId: 'onnx-community/Qwen2.5-0.5B-Instruct',
+    modelId: RECOMMENDED_AI_MODEL.id,
     device: 'wasm',
   };
   private listeners: Array<(status: ModelServiceStatus) => void> = [];

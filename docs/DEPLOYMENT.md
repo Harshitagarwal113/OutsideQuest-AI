@@ -190,7 +190,7 @@ To ensure transparency and manage user expectations, please note the operational
 - **Zero Ongoing Infrastructure Cost:** Because inference and storage run on the user's browser, there are zero serverless function execution costs or third-party API bills.
 
 ### On-Device Model Download Behavior
-- **Initial Download Bandwidth:** While the application shell is lightweight (< 150 KB gzip), activating the on-device AI model requires downloading the quantized weights (`onnx-community/Qwen2.5-0.5B-Instruct`, ~350 MB) directly from the public Hugging Face CDN.
+- **Initial Download Bandwidth:** While the application shell is lightweight (< 150 KB gzip), activating the on-device AI model requires downloading the quantized weights (`onnx-community/gemma-3-270m-it-ONNX`, ~200 MB) directly from the public Hugging Face CDN.
 - **Network Requirement:** The model download requires an initial stable internet connection.
 - **Browser Cache Persistence:** Once downloaded, model assets are cached locally by the browser's Cache API / IndexedDB, allowing subsequent runs to load from local storage without re-downloading.
 

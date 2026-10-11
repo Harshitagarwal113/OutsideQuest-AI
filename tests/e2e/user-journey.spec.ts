@@ -109,7 +109,7 @@ test.describe('Complete OutsideQuest AI User Journey', () => {
     await aboutAiLink.click();
     await expect(page).toHaveURL(/.*about-ai/);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/How OutsideQuest AI Operates On-Device/i);
-    await expect(page.getByText(/Qwen2\.5-0\.5B-Instruct/i)).toBeVisible();
+    await expect(page.getByText(/Gemma 3/i).first()).toBeVisible();
   });
 
   test('operates fully offline with zero network connectivity', async ({ page, context }) => {

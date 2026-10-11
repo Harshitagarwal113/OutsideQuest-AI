@@ -3,7 +3,7 @@ import { z } from 'zod';
 export const workerRequestSchema = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('INIT'),
-    modelId: z.string().default('onnx-community/Qwen2.5-0.5B-Instruct'),
+    modelId: z.string().default('onnx-community/gemma-3-270m-it-ONNX'),
     preferredDevice: z.enum(['webgpu', 'wasm', 'cpu']).optional(),
     dtype: z.enum(['q4', 'q8', 'fp32']).default('q4'),
   }),
