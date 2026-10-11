@@ -180,13 +180,13 @@ export default function AboutAiPage() {
             </p>
             <ul className="list-disc list-inside space-y-1.5 text-earth-muted text-xs pl-1">
               <li>
-                <strong>Not Offline on First Use:</strong> The AI model weights (~350MB) must be downloaded once over an active internet connection. Once saved to your browser&apos;s Cache Storage, it works offline.
+                <strong>Not Offline on First Use:</strong> The AI model weights ({RECOMMENDED_AI_MODEL.sizeEstimate}) must be downloaded once over an active internet connection. Once saved to your browser&apos;s Cache Storage, it works offline.
               </li>
               <li>
                 <strong>Instant Offline Fallback:</strong> If you are offline without the model downloaded, or wish to conserve battery and data, our verified <strong>Curated Offline Engine</strong> works instantly with zero downloads.
               </li>
               <li>
-                <strong>Model Scope vs. Giant Cloud LLMs:</strong> A 0.5B parameter quantized model is tuned specifically for structured micro-adventure formatting. It is not equivalent to a multi-billion-parameter cloud cluster.
+                <strong>Model Scope vs. Giant Cloud LLMs:</strong> A 270M parameter quantized model is tuned specifically for structured micro-adventure formatting. It is not equivalent to a multi-billion-parameter cloud cluster.
               </li>
               <li>
                 <strong>Guaranteed Safety Filters:</strong> Because generative models can occasionally make unsupported suggestions, our strict programmatic parser automatically verifies safety rules (no eating plants, no approaching animals, staying on public paths).
