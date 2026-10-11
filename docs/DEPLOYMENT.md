@@ -23,7 +23,7 @@ Clone the project repository to your local machine and install all required runt
 
 ```bash
 # Clone the repository
-git clone https://github.com/Harshitagarwal113/Agent-Baymax-.git
+git clone https://github.com/Harshitagarwal113/OutsideQuest-AI.git
 cd "OutsideQuest AI"
 
 # Install dependencies deterministically
